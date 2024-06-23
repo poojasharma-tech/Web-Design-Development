@@ -1,0 +1,144 @@
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGenius - Learn HTML & CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="icon">
+        <img src="data:image/png;base64,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" alt="Logo">
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="text" class="srch" placeholder="Search...">
+        <button class="btn">Search</button>
+    </div>
+</header>  
+
+<div class="main">
+    <div class="content">
+        <h1> HTML & CSS</h1>
+        <p class="par">Learn the basics and become comfortable in one of the most essential skills for web development: HTML & CSS.</p>
+        <button class="cn"><a href="courses.html">Get Started</a></button> 
+    </div>
+</div>
+
+<div class="courses-section">
+    <h2>Courses</h2>
+    <div class="course-list">
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrXdF5Hpq8rvRCd6z7L_0-58zo6noEzmqUJA&s" class="pic">
+            <h3>Introduction to HTML</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTu6QsF6eY9nSB975ya0ix4CO2hvFDh8kPR6vLTtgvumLYWBpyy" class="pic">
+            <h3>HTML Elements</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTMLDY3fvB4nwfEAZu9Fzg19iV7TpiQQllxrUSCbyine0kX_e7f" class="pic">
+            <h3>CSS Basics</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSOiAjYP9Uzo98B8uVLglGimRQmvRmg16Wh23ZfzAX43qHVuqJm" class="pic">
+            <h3>Selectors & Properties</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa2mHEg08PAFjeoDcolyAFTCoWQVhLnZ4pH53wGU-3LnClDdqi" class="pic">
+            <h3>Responsive Design</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXnU3XqvcMuRoeRbm679nLNeOJdz5AqIQ2KZvGFpJHjIWRxFtl" class="pic">
+            <h3>Advanced CSS Techniques</h3>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2022 NavGurukul Foundation for Social Welfare</p>
+</footer>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGenius - Learn HTML & CSS</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="icon">
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="about.html">ABOUT </a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="courses.html">COURSES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+</header>
+
+<div class="main">
+    <div class="content">
+        <h1> HTML & CSS</h1>
+        <p class="par">Learn the basics and become comfortable in one of the most essential skills for web development: HTML & CSS.</p>
+        <!-- <button class="cn"><a href="courses.html">Get Started</a></button> -->
+    </div>
+</div>
+
+<div class="courses-section">
+    <h2>Courses</h2>
+    <div class="course-list">
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrXdF5Hpq8rvRCd6z7L_0-58zo6noEzmqUJA&s" width="270px" height="170px" class="pic">
+            <h3>Introduction to HTML</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTu6QsF6eY9nSB975ya0ix4CO2hvFDh8kPR6vLTtgvumLYWBpyy" width="270px" height="170px" class="pic">
+            <h3>HTML Elements</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTMLDY3fvB4nwfEAZu9Fzg19iV7TpiQQllxrUSCbyine0kX_e7f"  width="270px" height="170px" class="pic">
+            <h3>CSS Basics</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSOiAjYP9Uzo98B8uVLglGimRQmvRmg16Wh23ZfzAX43qHVuqJm"  width="270px" height="170px" class="pic">
+            <h3>Selectors & Properties</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa2mHEg08PAFjeoDcolyAFTCoWQVhLnZ4pH53wGU-3LnClDdqi"  width="270px" height="170px" class="pic">
+            <h3>Responsive Design</h3>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXnU3XqvcMuRoeRbm679nLNeOJdz5AqIQ2KZvGFpJHjIWRxFtl"  width="270px" height="170px"  class="pic">
+            <h3>Advanced CSS Techniques</h3>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2024 WebGenius Foundation for Web Development</p>
+</footer>
+
+</body>
+</html>
